@@ -1,0 +1,33 @@
+Lista de requisitos;
+
+O cadastro do cliente, precisamos das informações como: Nome, telefone, e-mail e endereço. 
+
+O cadastro para o pet do cliente, precisamos das informações como: nome do pet, 
+idade, raça e observações.
+
+O registro de compras(Pedidos): Os produtos comprados, data da compra, valor total, 
+e o nome do cliente.
+
+O registro de atendimento: O serviço escolhido, data e hora do atendimento, valor, 
+qual funcionario fez o atendimento, uma descrição do o que foi feito.
+
+O registro dos funcionarios: Nome, Idade, telefone, email, endereço, cpf, salário, função, data do pagamento 
+dos funcionarios.
+
+O registro de serviços: Nome do serviço, descrição, nome do funcionario responsavel,
+valor, nome do pet e do cliente.
+
+O registro de produtos: Nome, descrição, valor, quantidade, quem é o fornecedor. 
+
+O registro de Fornecedores: Nome, endereço, email, telefone, CNPJ.
+
+Um registro do financeiro mensal, onde é feito o levantamento do valor total de vendas e 
+serviços, o valor pago aos funcionario.
+
+ 
+
+
+ 
+
+
+
