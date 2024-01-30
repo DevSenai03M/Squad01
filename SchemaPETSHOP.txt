@@ -1,0 +1,79 @@
+create database petshop;
+use petshop;
+create table cliente(
+id_cliente int primary key,
+nome_cliente varchar(45),
+telefone varchar(11),
+email varchar(45),
+endereco varchar(45)
+);
+
+create table fornecedor(
+id_fornecedor int primary key,
+nome_forn varchar(45),
+telefone varchar(11),
+cnpj varchar (14),
+endereco varchar(45)
+);
+
+create table produto(
+id_produto int primary key,
+nome_prod varchar(45),
+descricao varchar(255),
+valor decimal (4),
+quantidade int,
+fk_fornecedor int,
+constraint FK_FORNECEDOR foreign key(fk_fornecedor) references fornecedor (id_fornecedor)
+);
+
+create table pedido(
+id_pedido int primary key,
+dt_pedido date,
+fk_produto int,
+fk_cliente int,
+constraint FK_PRODUTO foreign key (fk_produto) references produto (id_produto),
+constraint FK_CLIENTE foreign key (fk_cliente) references cliente (id_cliente)
+);
+
+create table pet(
+id_pet int primary key auto_increment,
+nome_pet varchar(45),
+idade varchar(3),
+observacao varchar(255),
+fk_cliente int,
+constraint FK_CLIENTE_HAS_PET foreign key (fk_cliente) references cliente (id_cliente)
+);
+
+create table funcionarios (
+id_funcionario int primary key,
+nome_funcionario varchar(45),
+telefone varchar(11),
+cpf varchar(12),
+endereço varchar(45),
+func_funcao varchar(45),
+salario decimal(7),
+dt_pagamento_funcionario date
+);
+
+create table atendimento(
+id_atendimento int primary key,
+dt_atendimento date,
+valor decimal(4),
+fk_funcionario int, 
+constraint FK_FUNCIONARIO_HAS_ATENDIMENTO foreign key (fk_funcionario)references funcionarios (id_funcionario),
+descricao varchar(255),
+fk_pet int,
+constraint FK_PET foreign key (fk_pet) references pet(id_pet)
+);
+
+create table serviços(
+id_servico int primary key,
+nome_servico varchar(45),
+valor decimal (4), 
+fk_funcionario int, 
+constraint FK_FUNCIONARIO_HAS_SERVICOS foreign key (fk_funcionario)references funcionarios (id_funcionario)
+);
+
+
+
+
