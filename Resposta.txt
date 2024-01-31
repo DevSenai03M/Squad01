@@ -1,9 +1,9 @@
 1-
 select sum(valor) from servicos;
 
-2-
-SELECT pd.id_pedido,pro.nome_prod,pro.valor from pedido pd join Produto_has_Pedido pp on pp.fk_pedido=pd.id_pedido 
-join produto pro on pp.fk_produto=pro.id_produto;
+2-SELECT f.nome_funcionario 'Nome funcionarios',f.fun_funcao 'Função',a.valor 'Valor' FROM
+Funcionarios f INNER JOIN Atendimento a ON a.fk_funcionarios = id_atendimento INNER JOIN
+Funcionarios_has_atendimento fha ON fha.funcionarios_id_funcionarios = fha.atendimento_id_atendimento;
 
 3-
 SELECT c.nome_cliente 'Nome Cliente' ,p.nome_pet 'Nome Pet',a.dt_atendimento'Data' FROM Cliente c
@@ -11,9 +11,8 @@ INNER JOIN pet p ON c.fk_cliente = id_cliente INNER JOIN atendimento a ON a.fk_p
 
 
 4-
-SELECT f.nome_funcionario 'Nome funcionarios',f.fun_funcao 'Função',a.valor 'Valor' FROM
-Funcionarios f INNER JOIN Atendimento a ON a.fk_funcionarios = id_atendimento INNER JOIN
-Funcionarios_has_atendimento fha ON fha.funcionarios_id_funcionarios = fha.atendimento_id_atendimento;
+SELECT pd.id_pedido,pro.nome_prod,pro.valor from pedido pd join Produto_has_Pedido pp on pp.fk_pedido=pd.id_pedido 
+join produto pro on pp.fk_produto=pro.id_produto;
 
 5-
 select p.nome_pet, s.nome_servico, a.dt_atendimento 
