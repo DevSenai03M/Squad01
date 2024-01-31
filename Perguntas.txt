@@ -1,0 +1,10 @@
+1- Crie uma consulta que retorne o nome do fornecedor e de seus respectivos produtos.
+
+2- Crie uma consulta que retorne o id do pedido.nome do produto ,valor do produto. 
+
+3-Liste todos os nomes dos clientes e pets e data de atendimento agrupado por nome do cliente e pet.
+
+4-Liste o nome do funcionario sua funçao e valor do atendimento ordenados pelo nome dos funcionarios.
+
+5-Realize uma consulta para retornar os nome dos pets, qual o serviço realizado e data do atendimento.
+Realizados entre os dias  01/01/2024 até 30/01/2024.  

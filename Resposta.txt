@@ -1,0 +1,30 @@
+1-
+select f.nome_forn,p.nome_prod from fornecedor f
+inner join produto p
+on p.fk_fornecedor = f.id_fornecedor
+group by f.id_fornecedor;
+
+2-
+SELECT pd.id_pedido,pro.nome_prod,pro.valor from pedido pd join Produto_has_Pedido pp on pp.fk_pedido=pd.id_pedido 
+join produto pro on pp.fk_produto=pro.id_produto;
+
+3-
+SELECT c.nome_cliente 'Nome Cliente' ,p.nome_pet 'Nome Pet',a.dt_atendimento'Data' FROM Cliente c
+INNER JOIN pet p ON c.fk_cliente = id_cliente INNER JOIN atendimento a ON a.fk_pet = id_pet GROUP BY c.nome_cliente,p.nome_pet;
+
+
+4-
+SELECT f.nome_funcionario 'Nome funcionarios',f.fun_funcao 'Função',a.valor 'Valor' FROM
+Funcionarios f INNER JOIN Atendimento a ON a.fk_funcionarios = id_atendimento INNER JOIN
+Funcionarios_has_atendimento fha ON fha.funcionarios_id_funcionarios = fha.atendimento_id_atendimento;
+
+5-
+select p.nome_pet, s.nome_servico, a.dt_atendimento 
+From pet p 
+inner join atendimento a
+on a.fk_pet = p.id_pet 
+inner join servico_has_atendimento sha
+on sha.fk_atendimento = a.id_atendimento
+inner join servico s
+on s.idServico = sha.fk_servico
+where dt_atendimento between 01/01/2024 and 30/01/2024;
