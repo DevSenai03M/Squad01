@@ -1,4 +1,4 @@
-1- Crie uma consulta que retorne o nome do fornecedor e de seus respectivos produtos.
+1- Crie uma consulta que retorne a soma dos valores totais dos serviços.
 
 2- Crie uma consulta que retorne o id do pedido.nome do produto ,valor do produto. 
 
