@@ -1,8 +1,5 @@
 1-
-select f.nome_forn,p.nome_prod from fornecedor f
-inner join produto p
-on p.fk_fornecedor = f.id_fornecedor
-group by f.id_fornecedor;
+select sum(valor) from servicos;
 
 2-
 SELECT pd.id_pedido,pro.nome_prod,pro.valor from pedido pd join Produto_has_Pedido pp on pp.fk_pedido=pd.id_pedido 
